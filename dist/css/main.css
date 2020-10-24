@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+:root {
+  --max-width: 320px; }
+
+.alert {
+  color: red;
+  z-index: 2;
+  margin-top: 1rem; }
+
+.container {
+  margin: auto;
+  margin-top: 2rem;
+  width: var(--max-width);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 1px 1px 1px 1px #ddd, -1px -1px 1px 1px #ddd; }
+
+.search-input {
+  margin-top: 0.5rem; }
+
+.show-hide-fav {
+  width: 100%;
+  position: relative;
+  margin: 1rem 0 0.2rem;
+  padding: 0.3rem; }
+  .show-hide-fav .fav-btn {
+    border-color: aquamarine;
+    border-radius: 4px;
+    padding: 3px;
+    position: absolute;
+    right: 0;
+    background: rgba(104, 33, 138, 0.85);
+    color: #fff;
+    cursor: pointer; }
+    .show-hide-fav .fav-btn .fa-heart {
+      font-size: 12px;
+      color: #fff; }
+
+.card {
+  width: 100%;
+  background-color: aquamarine;
+  margin: 1rem 0;
+  padding: 0.2rem; }
+  .card .card-favourite {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); }
+    .card .card-favourite .fav-thumbnail {
+      padding: 1rem; }
+      .card .card-favourite .fav-thumbnail div {
+        position: relative; }
+        .card .card-favourite .fav-thumbnail div img {
+          width: 100%;
+          border-radius: 50%; }
+        .card .card-favourite .fav-thumbnail div i.fa-remove {
+          position: absolute;
+          left: 2rem;
+          color: red;
+          opacity: 0; }
+        .card .card-favourite .fav-thumbnail div:hover {
+          transform: scale(1.2); }
+          .card .card-favourite .fav-thumbnail div:hover i.fa-remove {
+            opacity: 1; }
+      .card .card-favourite .fav-thumbnail p {
+        display: inline-block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 130px; }
+
+.card-random {
+  width: 310px;
+  margin: 1rem 0;
+  box-shadow: 1px 1px 1px 1px #faf6f6, -1px -1px 1px 1px #faf6f6;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center; }
+  .card-random .random-meal {
+    display: flex;
+    flex-direction: column;
+    padding: 0.2rem; }
+    .card-random .random-meal h3 {
+      margin-top: 1rem;
+      position: absolute;
+      background: #fff;
+      padding: 0.3rem;
+      border-radius: 2px; }
+  .card-random img {
+    width: 300px; }
+  .card-random .heart-icon {
+    text-align: right; }
+    .card-random .heart-icon i.fa-heart {
+      color: gray; }
+  .card-random i.fa-heart-o {
+    text-align: right; }
+
+.meal-info-card {
+  display: flex;
+  justify-content: center;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 0.2rem; }
+  .meal-info-card > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 320px;
+    background: #fff;
+    position: fixed;
+    padding: 1rem; }
+    .meal-info-card > div button .delete {
+      position: absolute;
+      top: 0;
+      border: none;
+      color: red;
+      font-size: 20px;
+      right: 0;
+      padding: 0.5rem;
+      cursor: pointer;
+      box-shadow: 1px 1px 1px 1px #ddd, -1px -1px 1px 1px #ddd; }
+    .meal-info-card > div .meal-info {
+      height: 100vh;
+      overflow: auto;
+      padding-bottom: 2rem; }
+      .meal-info-card > div .meal-info img {
+        width: 300px;
+        margin: 1rem 0; }
+      .meal-info-card > div .meal-info .meal-title {
+        text-align: center;
+        padding: 0.5rem;
+        font-size: 20px; }
+      .meal-info-card > div .meal-info p {
+        text-align: justify;
+        padding: 0.1rem 0.2rem 1rem 0.4rem;
+        line-height: 1.6; }
+      .meal-info-card > div .meal-info .instruction-list {
+        padding: 0.2rem;
+        margin-bottom: 1.5rem; }
+        .meal-info-card > div .meal-info .instruction-list li {
+          padding: 0.15rem; }
+
+.hidden {
+  opacity: 0;
+  pointer-events: none; }
